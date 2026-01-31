@@ -37,6 +37,16 @@ I didn't trust just one "expert." Instead, I assembled a council of **7 differen
 * **The Efficient Runners**: While both were fast, **SVM (0.68s)** slightly beat **Random Forest (0.72s)** in training speed, making it a prime candidate for real-time edge deployment.
 * **The Baselines**: Even the simpler **Logistic Regression (95.16%)** and **Naive Bayes (92.95%)** models showed that this biological mystery is highly solvable through statistical patterns.
 
+
+### 🎯 Final Model Performance (Confusion Matrix)
+The **Random Forest** and **XGBoost** models achieved perfect separation on the test set (**2,438 samples**).
+
+| Actual \ Predicted | Edible (e) | Poisonous (p) |
+| :--- | :---: | :---: |
+| **Edible (e)** | **1,257** | 0 |
+| **Poisonous (p)** | 0 | **1,181** |
+
+> **Metric Insight**: The **Recall** for Poisonous mushrooms is **1.0**, meaning the model identifies **100% of lethal samples**. This is a critical requirement for this safety-based biological use case, ensuring zero false negatives.
 ---
 
 ## ⚙️ Chapter 4: Stress-Testing the Solution (Optimization)
